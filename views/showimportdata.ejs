@@ -1,0 +1,36 @@
+<%- include('common/navbar') %>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <% if (users != '') { %>
+      <table class="table border border-2 mt-4">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% users.forEach((item,index) => { %>
+          <tr>
+            <td><%= item.name %></td>
+            <td><%= item.email %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+        <div></div>
+      </table>
+
+      <% } else {%>
+      <h5>no imported users found in data base</h5>
+      <% } %>
+
+      <div class="mt-5">
+        <a href="/usersData" 
+          ><button class="btn btn-danger w-25">GoBack</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

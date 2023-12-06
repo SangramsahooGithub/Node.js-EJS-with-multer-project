@@ -1,0 +1,24 @@
+<%- include('common/navbar') %>
+
+<div class="container">
+  <div class="row justify-content-center mt-3">
+    <div class="col-lg-6 shadow-lg rounded-2 p-5">
+      <form action="/login" method="post">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Enter your email address</label
+          >
+          <input type="email" name="email" class="form-control" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"
+            >Enter your password</label
+          >
+          <input type="password" name="password" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-success">Login</button>
+      </form>
+    </div>
+  </div>
+</div>
